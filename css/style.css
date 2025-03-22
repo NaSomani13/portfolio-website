@@ -7,6 +7,9 @@
     --black: hsl(0, 0%, 0%); 
     --white:  hsl(0, 0%, 100%); 
 }
+*{
+    box-sizing: border-box;
+}
 html {
     font-size: 62.5%;
     }
@@ -22,17 +25,20 @@ h1{
     font-size: 4rem;
     font-weight: 800;
     line-height: 1.2;
+    margin: 0;
 }
 h2{
     font-size: 3rem;
     font-weight: 600;
     line-height: 1.2;
+    margin: 0;
 }
 h3{
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.2;
     color: var(--primary-color-dark);
+    margin: 0;
 }
 a {
    color: var(--primary-color-ultradark); 
@@ -74,4 +80,58 @@ a:active {
  }
 .container {
     padding-inline: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+header .container {
+    align-items: center;
+    gap: 0.5em;
+}
+.logo {
+    font-family: "Updock", cursive;
+    text-decoration: none;
+    font-size: 2.8rem;
+}
+nav ul {
+    padding: 0;
+    list-style-type: none; 
+    display: flex ;
+    justify-content: space-around; 
+    gap: 2em;
+    margin: 0;
+}
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color-dark);
+}
+nav a:visited {
+    color: var(--primary-color-dark);
+}
+nav a:hover, nav a:focus, nav a:active {
+    color: var(--primary-color)
+}
+section {
+    padding-block: 2em;
+}
+.project {
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+footer .container {
+    gap: 1em;
+}
+footer {
+    padding-top: 2em;
+}
+.list-wrapper {
+    padding-top: 1em;
+}
+.profile-image img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: 0 15%;
+    border-radius: 100vw;
 }
